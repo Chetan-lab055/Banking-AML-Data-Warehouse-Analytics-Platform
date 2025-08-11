@@ -1,0 +1,10 @@
+ER Diagram (simplified, ASCII)
+
+CUSTOMERS --< ACCOUNTS --< TRANSACTIONS >-- MERCHANTS
+             |
+             >-- ALERTS
+
+WAREHOUSE (star):
+DIM_ACCOUNT, DIM_MERCHANT, DIM_DATE -> FACT_TRANSACTIONS
+
+This diagram is included to explain relationships; include a PNG in the final repo if desired.

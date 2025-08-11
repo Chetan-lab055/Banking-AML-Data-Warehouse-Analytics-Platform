@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  aml_pg:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: aml
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d/sql:ro
+    ports:
+      - "5432:5432"
